@@ -37,6 +37,10 @@ No Node-Red foi utilizado os nodes:
 4. Function
 5. Dashboard
 
+#### Criando conexão Modbus TCP
+
+Foi adicionado um node Modbus para lê dados do controlador - Modbus Read:
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/config-modbus-01.png"/>
 
 
 
