@@ -108,28 +108,28 @@ Código: </br>
 
 #### Extraindo valores desejados
 
-Este node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node change:
+Este node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node *change*:
 	```javascript
-        var linhaDesejada = msg.linhaDesejada;
-        var a = msg.payload.length;
-        var res = {};
-        for(x = 1; x < a; x++){
-            if(x == linhaDesejada){
-                res = {
-                    
-                    tipo: msg.payload[x].col1,
-                    curva : msg.payload[x].col2,
-                    segmento : msg.payload[x].col3,
-                    taxa : msg.payload[x].col4,
-                    temp : msg.payload[x].col5,
-                    tempo : msg.payload[x].col6
+    var linhaDesejada = msg.linhaDesejada;
+    var a = msg.payload.length;
+    var res = {};
+    for(x = 1; x < a; x++){
+        if(x == linhaDesejada){
+            res = {
                 
-                }
+                tipo: msg.payload[x].col1,
+                curva : msg.payload[x].col2,
+                segmento : msg.payload[x].col3,
+                taxa : msg.payload[x].col4,
+                temp : msg.payload[x].col5,
+                tempo : msg.payload[x].col6
+            
             }
         }
-        msg.payload = res;
-        msg.topic = linhaDesejada;
-        return msg;
+    }
+    msg.payload = res;
+    msg.topic = linhaDesejada;
+    return msg;
 	```
 
 
