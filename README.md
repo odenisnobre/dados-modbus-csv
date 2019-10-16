@@ -18,7 +18,7 @@ A CPU M580 utilizada já vem embarcada com o protoco modbus TCP o que facilita a
 
 
 #### Configuração do Rack:
-<img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/config-rack"/></br>
+<img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/config-rack.png"/></br>
 
 
 
