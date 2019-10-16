@@ -133,4 +133,4 @@ Neste node está a função que extrai o valor desejado referenciado no node de 
 
 
 A função retorna um objeto no formato abaixo:
-> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-08.png"/>
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-09.png"/>
