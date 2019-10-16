@@ -108,7 +108,7 @@ Código: </br>
 
 #### Extraindo valores desejados
 
-Este node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node *change*:
+Neste node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node *change*:
 
 ```javascript
     var linhaDesejada = msg.linhaDesejada;
@@ -130,6 +130,8 @@ Este node está a função que extrai o valor desejado referenciado no node de l
     msg.topic = linhaDesejada;
     return msg;
 	```
+A função retorna um objeto no formato abaixo:
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-08.png"/>
 
 
 
