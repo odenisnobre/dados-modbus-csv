@@ -73,6 +73,11 @@ O resultado de saida será sempre um array:
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-02.png"/>
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-01.png"/>
 
+Código:
+	```json
+	[{"id":"7d851b28.c19994","type":"modbus-read","z":"7aaf1b1a.016644","name":"","topic":"","showStatusActivities":false,"logIOActivities":false,"showErrors":false,"unitid":"","dataType":"HoldingRegister","adr":"102","quantity":"1","rate":"500","rateUnit":"ms","delayOnStart":false,"startDelayTime":"","server":"f7d7534b.020d3","useIOFile":false,"ioFile":"","useIOForPayload":false,"x":250,"y":460,"wires":[["24d157b1.c80458","8f4ff681.9e7498"],[]]},{"id":"f7d7534b.020d3","type":"modbus-client","z":"","name":"M580","clienttype":"tcp","bufferCommands":true,"stateLogEnabled":false,"tcpHost":"192.168.238.50","tcpPort":"502","tcpType":"DEFAULT","serialPort":"/dev/ttyUSB","serialType":"RTU-BUFFERD","serialBaudrate":"9600","serialDatabits":"8","serialStopbits":"1","serialParity":"none","serialConnectionDelay":"100","unit_id":"1","commandDelay":"1","clientTimeout":"1000","reconnectTimeout":"2000"}]
+	```
+
 
 
 
