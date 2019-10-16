@@ -130,27 +130,24 @@ Este node está a função que extrai o valor desejado referenciado no node de l
     return msg;
 	```
 ```javascript
-	var dt = new Date(msg.payload);
-	var hrs = {
-	mes:	 dt.getMonth() + 1,
-	dia:     dt.getDate(),
-	ano:	 dt.getFullYear(),
-	hora:	 dt.getHours(),
-	minuto:  dt.getMinutes(),
-	segundo: dt.getMilliseconds()
-	}
-	if (hrs.mes > 9){
-		hrs.mes = hrs.mes;
-	} else {
-		hrs.mes = "0"+hrs.mes;
-	}
-	if (hrs.dia > 9){
-		hrs.dia = hrs.dia;
-	} else {
-		hrs.dia = "0"+hrs.dia;
-	}
-	msg.payload = hrs.ano.toString()+hrs.mes.toString()+hrs.dia.toString()+".log";
-	return msg;
+    var linhaDesejada = msg.linhaDesejada;
+    var a = msg.payload.length;
+    var res = {};
+    for(x = 1; x < a; x++){
+    if(x == linhaDesejada){
+    res = {
+    tipo: msg.payload[x].col1,
+    curva : msg.payload[x].col2,
+    segmento : msg.payload[x].col3,
+    taxa : msg.payload[x].col4,
+    temp : msg.payload[x].col5,
+    tempo : msg.payload[x].col6
+    }
+    }
+    }
+    msg.payload = res;
+    msg.topic = linhaDesejada;
+    return msg;
 	```
 
 
