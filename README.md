@@ -130,11 +130,7 @@ Neste node está a função que extrai o valor desejado referenciado no node de 
     msg.topic = linhaDesejada;
     return msg;
 	```
+
+
 A função retorna um objeto no formato abaixo:
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-08.png"/>
-
-
-
-
-
-
