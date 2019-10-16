@@ -28,6 +28,18 @@ A CPU M580 utilizada já vem embarcada com o protoco modbus TCP o que facilita a
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/Var.png"/>
 
 
+## Configuração Node-Red
+
+No Node-Red foi utilizado os nodes:
+1. Modbus
+2. File
+3. CSV
+4. Function
+5. Dashboard
+
+
+
+
 
 
 
