@@ -86,6 +86,27 @@ Código: </br>
 	[[{"id":"24d157b1.c80458","type":"change","z":"7aaf1b1a.016644","name":"","rules":[{"t":"set","p":"linhaDesejada","pt":"msg","to":"payload[0]","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":540,"y":440,"wires":[["9e0afb0b.db1598"]]}]
 	```
 
+#### Lendo arquivo
+
+Configura o caminho do arquivo desejado para leitura.
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-05.png"/>
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-06.png"/>
+
+Código: </br>
+	```json
+	[{"id":"9e0afb0b.db1598","type":"file in","z":"7aaf1b1a.016644","name":"Altere para o local do seu arquivo","filename":"C:\\Users\\denis.nobre\\Downloads\\csv_curvas.csv","format":"utf8","chunk":false,"sendError":false,"encoding":"none","x":860,"y":440,"wires":[["66fa5cf.b6673a4"]]}]
+	```
+
+#### Lendo arquivo csv
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-07.png"/>
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-08.png"/>
+Código: </br>
+	```json
+	[{"id":"66fa5cf.b6673a4","type":"csv","z":"7aaf1b1a.016644","name":"","sep":";","hdrin":"","hdrout":"","multi":"mult","ret":"\\r\\n","temp":"","skip":"0","strings":true,"x":1110,"y":440,"wires":[["fb9505f1.6780a8"]]}]
+	```
+
+
+
 
 
 
