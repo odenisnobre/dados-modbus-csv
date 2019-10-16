@@ -109,7 +109,7 @@ Código: </br>
 #### Extraindo valores desejados
 
 Este node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node *change*:
-	```
+	```javascript
     var linhaDesejada = msg.linhaDesejada;
     var a = msg.payload.length;
     var res = {};
