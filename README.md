@@ -24,8 +24,8 @@ A CPU M580 utilizada já vem embarcada com o protoco modbus TCP o que facilita a
 <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/logica.png"/></br>
 
 > O pino CV do contador `CTU_1` é o pino onde o Node-Red lê o índice para ser procurado no arquivo `.csv`.
-> Esta variável no programa tem o endereço de %MW102, parametro este que é configurado nos nodes Modbus.
-> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/var.png"/></br
+> Esta variável no programa tem o endereço de %MW102, parametro este que é configurado nos nodes Modbus.</br>
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/Var.png"/></br
 
 
 
