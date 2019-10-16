@@ -78,7 +78,7 @@ Código:</br>
 	[{"id":"7d851b28.c19994","type":"modbus-read","z":"7aaf1b1a.016644","name":"","topic":"","showStatusActivities":false,"logIOActivities":false,"showErrors":false,"unitid":"","dataType":"HoldingRegister","adr":"102","quantity":"1","rate":"500","rateUnit":"ms","delayOnStart":false,"startDelayTime":"","server":"f7d7534b.020d3","useIOFile":false,"ioFile":"","useIOForPayload":false,"x":250,"y":460,"wires":[["24d157b1.c80458","8f4ff681.9e7498"],[]]},{"id":"f7d7534b.020d3","type":"modbus-client","z":"","name":"M580","clienttype":"tcp","bufferCommands":true,"stateLogEnabled":false,"tcpHost":"192.168.238.50","tcpPort":"502","tcpType":"DEFAULT","serialPort":"/dev/ttyUSB","serialType":"RTU-BUFFERD","serialBaudrate":"9600","serialDatabits":"8","serialStopbits":"1","serialParity":"none","serialConnectionDelay":"100","unit_id":"1","commandDelay":"1","clientTimeout":"1000","reconnectTimeout":"2000"}]
 	```
 
-Logo após a saida do node *Modbus Read* foi adicionado um node *Change* para poder setar o payload no node *File*:
+Logo após a saida do node *Modbus Read* foi adicionado um node *Change* para poder setar uma objeto para ser considerado index da busca. Que posteriormente será usado no node *function*:
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/node-config-04.png"/>
 
 Código: </br>
@@ -105,6 +105,32 @@ Código: </br>
 	[{"id":"66fa5cf.b6673a4","type":"csv","z":"7aaf1b1a.016644","name":"","sep":";","hdrin":"","hdrout":"","multi":"mult","ret":"\\r\\n","temp":"","skip":"0","strings":true,"x":1110,"y":440,"wires":[["fb9505f1.6780a8"]]}]
 	```
 
+
+#### Extraindo valores desejados
+
+Este node está a função que extrai o valor desejado referenciado no node de leitura do Modbus, setado no node change:
+	```javascript
+        var linhaDesejada = msg.linhaDesejada;
+        var a = msg.payload.length;
+        var res = {};
+        for(x = 1; x < a; x++){
+            if(x == linhaDesejada){
+                res = {
+                    
+                    tipo: msg.payload[x].col1,
+                    curva : msg.payload[x].col2,
+                    segmento : msg.payload[x].col3,
+                    taxa : msg.payload[x].col4,
+                    temp : msg.payload[x].col5,
+                    tempo : msg.payload[x].col6
+                
+                }
+            }
+        }
+        msg.payload = res;
+        msg.topic = linhaDesejada;
+        return msg;
+	```
 
 
 
