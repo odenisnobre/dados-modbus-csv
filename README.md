@@ -114,18 +114,16 @@ Este node está a função que extrai o valor desejado referenciado no node de l
     var a = msg.payload.length;
     var res = {};
     for(x = 1; x < a; x++){
-        if(x == linhaDesejada){
-            res = {
-                
-                tipo: msg.payload[x].col1,
-                curva : msg.payload[x].col2,
-                segmento : msg.payload[x].col3,
-                taxa : msg.payload[x].col4,
-                temp : msg.payload[x].col5,
-                tempo : msg.payload[x].col6
-            
-            }
-        }
+    if(x == linhaDesejada){
+    res = {
+    tipo: msg.payload[x].col1,
+    curva : msg.payload[x].col2,
+    segmento : msg.payload[x].col3,
+    taxa : msg.payload[x].col4,
+    temp : msg.payload[x].col5,
+    tempo : msg.payload[x].col6
+    }
+    }
     }
     msg.payload = res;
     msg.topic = linhaDesejada;
