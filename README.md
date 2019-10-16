@@ -28,6 +28,9 @@ A CPU M580 utilizada já vem embarcada com o protoco modbus TCP o que facilita a
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/Var.png"/>
 
 
+A programção foi feito no Unity Pro v11.0.
+O proejeto de exemplo se encontra na pasta `Projeto NodeRed`
+
 ## Configuração Node-Red
 
 No Node-Red foi utilizado os nodes:
