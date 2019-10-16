@@ -48,7 +48,8 @@ Primeiramente é preciso criar uma conexão com o servidor Modbus, que basicamen
 
 > A porta padrão do Modbus TCP é 502. Existem softwares que aceitam fazer alteração outros não.
 
-
+A configuração completa deve ficar da seguinte forma:
+> <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/config-modbus-02.png"/
 
 
 
