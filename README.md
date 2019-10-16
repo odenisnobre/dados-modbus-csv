@@ -42,6 +42,11 @@ No Node-Red foi utilizado os nodes:
 Foi adicionado um node Modbus para lê dados do controlador - Modbus Read:
 > <img src="https://github.com/dedynobre/dados-modbus-csv/blob/master/imagens/config-modbus-01.png"/>
 
+Primeiramente é preciso criar uma conexão com o servidor Modbus, que basicamente precisamos configurar o IP do controlador e porta, no nosso caso as condigurações são:
+* IP: 192.168.238.50
+* Porta: 502
+
+> A porta padrão do Modbus TCP é 502. Existem softwares que aceitam fazer alteração outros não.
 
 
 
