@@ -129,7 +129,29 @@ Este node está a função que extrai o valor desejado referenciado no node de l
     msg.topic = linhaDesejada;
     return msg;
 	```
-
+```javascript
+	var dt = new Date(msg.payload);
+	var hrs = {
+	mes:	 dt.getMonth() + 1,
+	dia:     dt.getDate(),
+	ano:	 dt.getFullYear(),
+	hora:	 dt.getHours(),
+	minuto:  dt.getMinutes(),
+	segundo: dt.getMilliseconds()
+	}
+	if (hrs.mes > 9){
+		hrs.mes = hrs.mes;
+	} else {
+		hrs.mes = "0"+hrs.mes;
+	}
+	if (hrs.dia > 9){
+		hrs.dia = hrs.dia;
+	} else {
+		hrs.dia = "0"+hrs.dia;
+	}
+	msg.payload = hrs.ano.toString()+hrs.mes.toString()+hrs.dia.toString()+".log";
+	return msg;
+	```
 
 
 
